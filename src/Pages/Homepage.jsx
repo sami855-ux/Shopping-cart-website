@@ -1,14 +1,30 @@
-import { useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 import Header from "../Component/Header"
 import styles from "./Homepage.module.css"
 import ItemList from "../Component/ItemList"
+import Spinner from "../Component/Spinner"
 
 const BASE_URL = "http://localhost:1234/item"
+
+//Adding context
+const ImageContext = createContext()
 
 function Homepage() {
   const [itemData, setItemData] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [typeOfImage, setTypeOfImage] = useState("all")
+
+  //Drived State
+  let filterData
+
+  if (typeOfImage === "all") filterData = itemData
+  if (typeOfImage === "t-shirt")
+    filterData = itemData.filter((data) => data.type === typeOfImage)
+  if (typeOfImage === "jacket")
+    filterData = itemData.filter((data) => data.type === typeOfImage)
+  if (typeOfImage === "trouser")
+    filterData = itemData.filter((data) => data.type === typeOfImage)
 
   useEffect(() => {
     setIsLoading(true)
@@ -26,25 +42,50 @@ function Homepage() {
     }
     fetchData()
   }, [])
+
   return (
-    <>
+    <ImageContext.Provider>
       <Header />
       <div className={styles.filter}>
-        <button className={styles.active}>All</button>
-        <button>T-shirt</button>
-        <button>Jacket</button>
-        <button>Trouser</button>
+        <button
+          className={typeOfImage === "all" ? `${styles.active}` : null}
+          onClick={() => setTypeOfImage("all")}
+        >
+          All
+        </button>
+        <button
+          className={typeOfImage === "t-shirt" ? `${styles.active}` : null}
+          onClick={() => setTypeOfImage("t-shirt")}
+        >
+          T-shirt
+        </button>
+        <button
+          className={typeOfImage === "jacket" ? `${styles.active}` : null}
+          onClick={() => setTypeOfImage("jacket")}
+        >
+          Jacket
+        </button>
+        <button
+          className={typeOfImage === "trouser" ? `${styles.active}` : null}
+          onClick={() => setTypeOfImage("trouser")}
+        >
+          Trouser
+        </button>
       </div>
-      <main className={styles.mainWrapper}>
-        {itemData.length > 0 ? (
-          itemData.map((item, itemIndex) => (
-            <ItemList item={item} key={itemIndex} />
-          ))
-        ) : (
-          <p>There is no data yet!</p>
-        )}
-      </main>
-    </>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <main className={styles.mainWrapper}>
+          {filterData.length > 0 ? (
+            filterData.map((item, itemIndex) => (
+              <ItemList item={item} key={itemIndex} />
+            ))
+          ) : (
+            <p>There is no data yet!</p>
+          )}
+        </main>
+      )}
+    </ImageContext.Provider>
   )
 }
 
