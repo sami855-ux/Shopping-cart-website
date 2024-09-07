@@ -1,4 +1,5 @@
-import { createContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
+import PropTypes from "prop-types"
 
 import Header from "../Component/Header"
 import styles from "./Homepage.module.css"
@@ -7,11 +8,7 @@ import Spinner from "../Component/Spinner"
 
 const BASE_URL = "http://localhost:1234/item"
 
-//Adding context
-const ImageContext = createContext()
-
-function Homepage() {
-  const [itemData, setItemData] = useState([])
+function Homepage({ itemData, onItem, onAddItemToCart, cartItemLength }) {
   const [isLoading, setIsLoading] = useState(false)
   const [typeOfImage, setTypeOfImage] = useState("all")
 
@@ -33,7 +30,9 @@ function Homepage() {
         const res = await fetch(`${BASE_URL}`)
         const data = await res.json()
 
-        setItemData(data)
+        if (!data.length > 0) return
+
+        onItem(data)
       } catch (error) {
         console.log(error.message)
       } finally {
@@ -44,8 +43,8 @@ function Homepage() {
   }, [])
 
   return (
-    <ImageContext.Provider>
-      <Header />
+    <>
+      <Header cartItemLength={cartItemLength} />
       <div className={styles.filter}>
         <button
           className={typeOfImage === "all" ? `${styles.active}` : null}
@@ -78,15 +77,26 @@ function Homepage() {
         <main className={styles.mainWrapper}>
           {filterData.length > 0 ? (
             filterData.map((item, itemIndex) => (
-              <ItemList item={item} key={itemIndex} />
+              <ItemList
+                item={item}
+                key={itemIndex}
+                onAddItemToCart={onAddItemToCart}
+              />
             ))
           ) : (
             <p>There is no data yet!</p>
           )}
         </main>
       )}
-    </ImageContext.Provider>
+    </>
   )
+}
+
+Homepage.propTypes = {
+  itemData: PropTypes.array,
+  onItem: PropTypes.func,
+  onAddItemToCart: PropTypes.func,
+  cartItemLength: PropTypes.number,
 }
 
 export default Homepage

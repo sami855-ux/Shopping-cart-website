@@ -1,11 +1,17 @@
+import PropTypes from "prop-types"
+
 import Header from "../Component/Header"
 
-function Cart() {
+function Cart({ cartItemLength }) {
   return (
     <>
-      <Header />
+      <Header cartItemLength={cartItemLength} />
     </>
   )
+}
+
+Cart.propTypes = {
+  cartItemLength: PropTypes.number,
 }
 
 export default Cart
