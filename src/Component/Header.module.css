@@ -37,6 +37,7 @@
   padding: 10px;
   margin-block: 5px;
   cursor: pointer;
+  position: relative;
 }
 .wrapper ul li a {
   color: #333;
@@ -45,4 +46,17 @@
 }
 .wrapper ul li a:global(.active) {
   border-bottom: 2px solid rgb(28, 232, 45);
+}
+.top {
+  position: absolute;
+  top: -1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  background-color: orangered;
 }

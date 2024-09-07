@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom"
 import styles from "./Header.module.css"
+import PropTypes from "prop-types"
 
-function Header() {
+function Header({ cartItemLength }) {
   return (
     <div className={styles.wrapper}>
       <Link to="/">
@@ -16,11 +17,20 @@ function Header() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/cart">Cart</NavLink>
+          <NavLink to="/cart">
+            Cart
+            {cartItemLength !== 0 ? (
+              <span className={styles.top}>{cartItemLength}</span>
+            ) : null}
+          </NavLink>
         </li>
       </ul>
     </div>
   )
+}
+
+Header.propTypes = {
+  cartItemLength: PropTypes.number,
 }
 
 export default Header
