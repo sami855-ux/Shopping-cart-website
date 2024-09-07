@@ -1,9 +1,28 @@
 .mainWrapper {
   width: 85%;
-  margin: 10px auto;
-  background-color: #f8f5f5;
-  height: 100vh;
+  margin: 10px auto 20px;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  gap: 26px;
+}
+.filter {
+  width: 85%;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   gap: 10px;
+}
+.filter button {
+  width: 100px;
+  padding-block: 4px;
+  border: 1px solid rgb(217, 215, 215);
+  border-radius: 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(43, 232, 6);
+  color: #fff;
 }

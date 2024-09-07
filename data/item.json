@@ -5,84 +5,96 @@
       "title": "Black T-shirt",
       "price": "250",
       "desc": "Xl sized fashioned t-shirt",
-      "image-path": "./cloth1.jfif"
+      "image-path": "./cloth1.jfif",
+      "type": "t-shirt"
     },
     {
       "id": "t4759",
       "title": "Blue colored T-shirt",
       "price": "200",
       "desc": "xl, xxl sized fashioned t-shirt",
-      "image-path": "./cloth2.jfif"
+      "image-path": "./cloth2.jfif",
+      "type": "t-shirt"
     },
     {
       "id": "ts78542",
       "title": "Blue T-shirt with text",
       "price": "300",
       "desc": "xl, xxl sized t-shirt",
-      "image-path": "./cloth3.jfif"
+      "image-path": "./cloth3.jfif",
+      "type": "t-shirt"
     },
     {
       "id": "t45396",
       "title": "gray colored T-shirt",
       "price": "350",
       "desc": "Brand with high quality t-shirt",
-      "image-path": "./cloth4.jfif"
+      "image-path": "./cloth4.jfif",
+      "type": "t-shirt"
     },
     {
       "id": "t4759",
       "title": "White colored T-shirt with an image",
       "price": "450",
       "desc": "xl, xxl sized fashioned t-shirt",
-      "image-path": "./cloth6.jfif"
+      "image-path": "./cloth6.jfif",
+      "type": "t-shirt"
     },
     {
       "id": "ts4582",
       "title": "Beautifull Rain Jacket",
       "price": "750",
       "desc": "light blue colored jacket",
-      "image-path": "./cloth7.jfif"
+      "image-path": "./cloth7.jfif",
+      "type": "jacket"
     },
     {
       "id": "ja4522",
       "title": "Old-school jacket",
       "price": "1150",
       "desc": "with all sizes",
-      "image-path": "./cloth9.jfif"
+      "image-path": "./cloth9.jfif",
+      "type": "jacket"
     },
     {
       "id": "ja47589",
       "title": "Black colored leather jacket",
       "price": "950",
       "desc": "just xl size ",
-      "image-path": "./cloth10.jfif"
+      "image-path": "./cloth10.jfif",
+      "type": "jacket"
     },
     {
       "id": "jakt78455",
       "title": "Confertable jacket",
       "price": "450",
       "desc": "For cold day",
-      "image-path": "./cloth11.jfif"
+      "image-path": "./cloth11.jfif",
+      "type": "jacket"
     },
     {
       "id": "jaj4522",
       "title": "Old-school jacket",
       "price": "1150",
       "desc": "white colored ",
-      "image-path": "./cloth13.jfif"
+      "image-path": "./cloth13.jfif",
+      "type": "jacket"
     },
     {
       "id": "tr4822",
       "title": "Collection of trousers",
       "price": "1550",
       "desc": "adult sized fashioned and brand",
-      "image-path": "./cloth15.jfif"
+      "image-path": "./cloth15.jfif",
+      "type": "trouser"
     },
     {
       "id": "tr475866",
       "title": "Beautiful Trouser",
       "price": "750",
       "desc": "for adults",
-      "image-path": "./images.jfif"
+      "image-path": "./images.jfif",
+      "type": "trouser"
     }
   ]
 }

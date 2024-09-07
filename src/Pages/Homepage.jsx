@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 import Header from "../Component/Header"
 import styles from "./Homepage.module.css"
+import ItemList from "../Component/ItemList"
 
 const BASE_URL = "http://localhost:1234/item"
 
@@ -28,7 +29,21 @@ function Homepage() {
   return (
     <>
       <Header />
-      <main className={styles.mainWrapper}></main>
+      <div className={styles.filter}>
+        <button className={styles.active}>All</button>
+        <button>T-shirt</button>
+        <button>Jacket</button>
+        <button>Trouser</button>
+      </div>
+      <main className={styles.mainWrapper}>
+        {itemData.length > 0 ? (
+          itemData.map((item, itemIndex) => (
+            <ItemList item={item} key={itemIndex} />
+          ))
+        ) : (
+          <p>There is no data yet!</p>
+        )}
+      </main>
     </>
   )
 }
