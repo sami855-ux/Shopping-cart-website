@@ -1,0 +1,9 @@
+.mainWrapper {
+  width: 85%;
+  margin: 10px auto;
+  background-color: #f8f5f5;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
