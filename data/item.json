@@ -1,0 +1,88 @@
+{
+  "item": [
+    {
+      "id": "12453",
+      "title": "Black T-shirt",
+      "price": "250",
+      "desc": "Xl sized fashioned t-shirt",
+      "image-path": "./cloth1.jfif"
+    },
+    {
+      "id": "t4759",
+      "title": "Blue colored T-shirt",
+      "price": "200",
+      "desc": "xl, xxl sized fashioned t-shirt",
+      "image-path": "./cloth2.jfif"
+    },
+    {
+      "id": "ts78542",
+      "title": "Blue T-shirt with text",
+      "price": "300",
+      "desc": "xl, xxl sized t-shirt",
+      "image-path": "./cloth3.jfif"
+    },
+    {
+      "id": "t45396",
+      "title": "gray colored T-shirt",
+      "price": "350",
+      "desc": "Brand with high quality t-shirt",
+      "image-path": "./cloth4.jfif"
+    },
+    {
+      "id": "t4759",
+      "title": "White colored T-shirt with an image",
+      "price": "450",
+      "desc": "xl, xxl sized fashioned t-shirt",
+      "image-path": "./cloth6.jfif"
+    },
+    {
+      "id": "ts4582",
+      "title": "Beautifull Rain Jacket",
+      "price": "750",
+      "desc": "light blue colored jacket",
+      "image-path": "./cloth7.jfif"
+    },
+    {
+      "id": "ja4522",
+      "title": "Old-school jacket",
+      "price": "1150",
+      "desc": "with all sizes",
+      "image-path": "./cloth9.jfif"
+    },
+    {
+      "id": "ja47589",
+      "title": "Black colored leather jacket",
+      "price": "950",
+      "desc": "just xl size ",
+      "image-path": "./cloth10.jfif"
+    },
+    {
+      "id": "jakt78455",
+      "title": "Confertable jacket",
+      "price": "450",
+      "desc": "For cold day",
+      "image-path": "./cloth11.jfif"
+    },
+    {
+      "id": "jaj4522",
+      "title": "Old-school jacket",
+      "price": "1150",
+      "desc": "white colored ",
+      "image-path": "./cloth13.jfif"
+    },
+    {
+      "id": "tr4822",
+      "title": "Collection of trousers",
+      "price": "1550",
+      "desc": "adult sized fashioned and brand",
+      "image-path": "./cloth15.jfif"
+    },
+    {
+      "id": "tr475866",
+      "title": "Beautiful Trouser",
+      "price": "750",
+      "desc": "for adults",
+      "image-path": "./images.jfif"
+    }
+  ]
+}
